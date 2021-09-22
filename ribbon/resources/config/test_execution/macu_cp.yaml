@@ -1,0 +1,160 @@
+#==========================================================================#
+# This is file has all the configuration settings for running a test suite #
+#==========================================================================#
+
+# This below parameter decides in which browser to run the test suite #
+# List of Browser are as follows: CHROME,FIREFOX,IE,CHROME_HEADLESS,FIREFOX_HEADLESS,HTML_UNIT_DRIVER ,PHANTOM_JS
+#browser: FIREFOX
+browser: CHROME
+#browser: PHANTOM_JS
+#browser: MSEDGEDRIVER
+#browser: CHROME_HEADLESS
+
+# This below parameter decides Environment URL #
+
+url: https://rbbn--test.my.salesforce.com/006/o
+
+# This below parameter decides the wait Time in seconds #
+webdriverWaitTime: 100
+
+#SignIn Credentials
+#username: shashidara.sales@softclouds.com.test 
+#password: Softclouds@123
+
+username: rashmip@softclouds.com.test 
+password: August@123456789
+
+#Enter Quote Name
+enterquotename: RIBBON AUTOMATION DEMO
+
+keyword_search: 100% First Time Home Buyer Loan
+
+#Enter Site Name
+entersitenameem: EM
+entersitenamegvpp: GVPP
+
+entersystemsrequire: '3'
+
+enteredpnodes: '2'
+enterbasiclines: '201'
+entersiplines: '201'
+entersipedpdevices: '201'
+entereuplogins: '201'
+
+enternewbasiclines: '201'
+enternewsiplines: '201'
+enternewsipedpdevices: '201'
+enterneweuplogins: '201'
+
+entercimvoicemail: '201'
+entercustomnewascii: '5'
+entercustomnewdbcs: '2'
+
+enterpartqtygtp: '1'
+enterpartqtybs: '2'
+enterpartqtylab: '3'
+
+enterpartqtygtpfwgeo: '2'
+enterpartqtysfwmult: '1'
+enterpartqtysmsana: '1'
+
+enteraddlproductdiscount: '1.20'
+enteraddlmaintenancediscount: '1.25'
+enteraddlservicesdiscount: '1.30'
+enteronetimediscount: '10.00'
+enteronetimediscountamount: '500'
+
+searchusername: Swamy
+searchemailid: swamyk@softclouds.com
+
+title: Latest COVID-19 Updates
+keywords: Criticals
+Editkeywords: Criticals COVID-19 Updates
+contentinfo: contentinfo 'Reach out to your immediate supervisor with questions.'
+ 
+content: 'COVID-19 Update:  Find additional information on COVID-19 Branch & Service Center Operations\n
+* Vaccine\n
+* Similar to the flu shot, we encourage you to take a lunch hour or go after work if you choose to receive the vaccine.\n
+* You should be able to easily schedule a time to receive a vaccine.
+* Take PTO if an adverse reaction occurs.
+* Take PTO if an adverse reaction occurs
+* First URL of the pageArticle Link
+* Second URL of the page
+* Third URL of the page
+* The few documented cases of a stronger reaction indicate that the affects typically last one to two days.
+* Have an open conversation with your manager if other accommodations are necessary.
+* The cost of the vaccine is covered by insurance.
+* Mask Mandates
+* As the counties and health departments begin to relax their mask mandates, MACU will address this as follows:
+* The mask mandate requirement for team members will remain in place for the foreseeable future.
+* Mask guidance for members will follow State, County and Health department guidelines for those areas.
+* Personal Protection Equipment (PPE)
+* Order masks and other PArticle LinkPE by submitting a ServiceNow Facilities ticket.
+* Items available
+* Cotopaxi masks ($7 each)
+* Hand sanitizer
+* Gloves
+* Disposable masks
+* Sanitation wipes
+* Employee Resources
+* Mountain America is here for you! Check out these resources:
+* MACU Desktop Citrix ReceiverWorkspace Step-by-Step Surface Devices Step-by-Step
+* Microsoft Teams Step-by-Step
+* Multi-Factor Authentication (MFA) Step-by-Step
+* Remote Work Agreement  
+* Setting up Your New Laptop
+* Surface Devices Step-by-Step'
+Id: '1000124'
+Link: 'Article Link'
+BasicInfo: 'BasicInfo - Remote Work
+* -Use the following resources when connecting to work applications remotely'
+BasicContactInfo: 'BasicContactInfo -Remote Work
+* -Use the following resources when connecting to work applications remotely
+* -Cisco Finesse Step-by-Step
+* -Cisco Jabber Step-by-Step  
+* -Electronic Communication and Information Basic Info
+* -Extend Surface Device Battery Life Step-by-Step
+* -MACU Desktop Citrix ReceiverWorkspace Step-by-Step Surface Devices Step-by-Step
+* -Microsoft Teams Step-by-Step
+* -Multi-Factor Authentication (MFA) Step-by-Step
+* -Remote Work Agreement  
+* -Setting up Your New Laptop
+* -Surface Devices Step-by-Step'
+Steps: 'Steps- Employee Resources'
+StepsContactInfo: 'StepsContactInfo - Mountain America is here for you! Check out these resources:
+* Report COVID-19 in the Workplace
+* Contact Tracing for COVID-19
+* COVID-19 Pay Options
+* Corporate FSR  
+* Employee Assistance Program (EAP)
+* Employee Loans
+* Infectious Disease
+* MACU Facility Standards
+* Mountain America Center Meetings & Events
+* Medical Leave of Absence
+* Personal Time Off (PTO)
+* Tanner Meetings & Events
+* Thrive Clinic
+* The CareATC Patient Access Center is currently performing all appointment scheduling activities. Our clinics are not currently accepting walk-in or self-scheduled patients. To schedule an appointment, contact the clinic 800-993-8244.
+* Thrive Fitness Centers
+* Travel Pay
+*Traveling Branch Employees'
+Forms_Resources: 'Forms_Resources - Mask Mandates'
+Forms_Resources_Content: 'Forms_Resources_Content- As the counties and health departments begin to relax their mask mandates, MACU will address this as follows:
+* The mask mandate requirement for team members will remain in place for the foreseeable future.
+* Mask guidance for members will follow State, County and Health department guidelines for those areas.'
+SalesConnections: 'SalesConnections-Sales Connections'
+SalesConnectionsContent: 'SalesConnectionsContent- As the counties and health departments begin to relax their mask mandates, MACU will address this as follows:
+* The mask mandate requirement for team members will remain in place for the foreseeable future.
+* Mask guidance for members will follow State, County and Health department guidelines for those areas.'
+AnswerType: 'https://macu1--tst.custhelp.com/app/answers/macu_view/a_id/1000124'
+StartTime: '00:00'
+RemoveTime: '11:59'
+ReviewTime: '06:00'
+EditReason: Some Important Updates
+ 
+AnswerId: '1000253' 
+ReplayForFeedBack: 'It is working as per Expected' 
+
+Request_Change: 'Request Change'
+ThumbsUp_Down: 'ThumbsUp Down '
