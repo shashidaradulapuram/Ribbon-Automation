@@ -41,6 +41,7 @@ public class Create_Opportunity_Flow extends Ribbon_Management {
 					hardWait(5);
 					click(bySwitchtoclassic);
 					hardWait(5);
+					System.out.println("Changed to Salesforce Classic");
 				}  
 			      catch(Exception e) 
 			     {
