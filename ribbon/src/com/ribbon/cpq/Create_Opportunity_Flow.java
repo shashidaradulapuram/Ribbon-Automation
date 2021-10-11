@@ -23,8 +23,8 @@ public class Create_Opportunity_Flow extends Ribbon_Management {
 	public void testSignIn() throws Exception 
 	   {
 		try {
-		     	openBrowser();
-		    	signIntoRibbon();			
+			    openBrowser();
+		    	signIntoRibbon();		    	
 		    } catch (Exception e) 
 		    {
 			log.error("Login/SignIn un-successful");
@@ -47,7 +47,6 @@ public class Create_Opportunity_Flow extends Ribbon_Management {
 			     {
 			    	  e.printStackTrace();
 			     }
-			        hardWait(2);
 			        click(byOpportunity);
 			        hardWait(5);
 					click(bySelectOpportunity);
@@ -92,9 +91,9 @@ public class Create_Opportunity_Flow extends Ribbon_Management {
             enterText(byClearSiteName,byEnterSiteNameEM);
             hardWait(5);
             click(byTopConfigGroup);            
-            click(bySelectEMTopConfigGroup);            
-            click(byAddConfigurationButton);
-            hardWait(5);
+            click(bySelectEMTopConfigGroup);
+            click(byConfigNameEM);            
+            click(bySelectEMConfigName);            
             
             try {
             click(byTargetApplication);            
@@ -102,13 +101,17 @@ public class Create_Opportunity_Flow extends Ribbon_Management {
             hardWait(2);
             }
             catch(Exception e) {            
-            click(bySystemConfiguration);
-            hardWait(20);
+            System.out.println("Target Application not available");
             }
+            click(byAddConfigurationButton);
+            hardWait(5);
+            click(bySystemConfiguration);
+            hardWait(15);
             click(byEdgeMarcCheckbox);
             hardWait(5);
-            //click(byLocationEM);            
-            //click(bySelectLocationEM);            
+            
+            click(byNewConfig);            
+            click(bySelectNewConfig);
             click(byEdgeMarcProductLine);            
             click(bySelectEdgeMarcProductLine);            
             click(byEdgeMarcQuote);            
@@ -138,7 +141,17 @@ public class Create_Opportunity_Flow extends Ribbon_Management {
             click(bySelectSecondPRIPort);              
             //click(byExpandMaintenance);
             click(byMaintenanceProvider);            
-            click(bySelectMaintenanceProvider);   
+            click(bySelectMaintenanceProvider);  
+			/////////////////////////////////////////////////////    OEM L1/2 Support Approved    /////////////////////////////////////////////////////////////////
+			List<WebElement> oemSupport = driver.findElements(By.xpath("//div[@class='oj-switch-track']"));            
+			if (oemSupport.size() != 0) {
+				oemSupport.get(0).findElement(By.xpath("//oj-switch[@id='oEML12SupportApproved']//div[@aria-checked='false']")).click();
+			System.out.println("Switch is OFF and changed to ON");
+			} else {
+			System.out.println("Switch is already ON");
+			}
+			click(byLevelOfSupportRequired);            
+            click(bySelectLevelOfSupportRequired); 
             click(byConfigUpdateButton);
             hardWait(10);
             /////////////////////////////////////////////////////    SCROLL DOWN TO BOTTOM OF PAGE     //////////////////////////////////////////////////////////
@@ -170,8 +183,20 @@ public class Create_Opportunity_Flow extends Ribbon_Management {
             hardWait(15);
             enterText(byClearSiteName,byEnterSiteNameGVPP);
             hardWait(5);
-            click(byTopConfigGroup);
+            click(byGVPPTopConfigGroup);
             click(bySelectGVPPTopConfigGroup); 
+            click(byConfigNameGVPP);
+            click(bySelectConfigNameGVPP);            
+            
+            try {
+                click(byTargetApplication);            
+                click(bySelectTargetApplication);
+                hardWait(2);
+                }
+                catch(Exception e) {            
+                System.out.println("Target Application not available");
+                }
+            
             click(byAddConfigurationButton);
             hardWait(5);
             click(bySystemConfiguration);
@@ -297,17 +322,27 @@ public class Create_Opportunity_Flow extends Ribbon_Management {
             hardWait(15);
             click(byCatalogName);
             click(bySelectCatalogName);
+            click(byCategoryNameCatalog);
+            click(bySelectCategoryNameCatalogH);
+            
             try {
             click(byTargetApplication);
             click(bySelectTargetApplication);
             } catch(Exception e) {
              System.out.println("Already Target Application visible and is read only");
             }
+            
             click(byExpandMaintenance);
             click(byMaintenanceProvider);
             click(bySelectMaintenanceProvider);
-            click(byCatalogType);
-            click(bySelectCatalogType);
+            
+            click(byAddCatalogButton);
+            hardWait(5);
+            click(byCategoryNameCatalog);
+            click(bySelectCategoryNameCatalogS);
+            click(byAddCatalogButton);
+            hardWait(5);            
+            
             click(bySytsemConfigurationHardwareRBP);
             hardWait(3);
             click(bySearchButton);
@@ -343,12 +378,12 @@ public class Create_Opportunity_Flow extends Ribbon_Management {
 			((JavascriptExecutor) driver).executeScript("window.scrollTo(document.body.scrollHeight, 0)");
 			hardWait(5);  
 			
-			click(bySytsemConfigurationRBP);
+			/*click(bySytsemConfigurationRBP);
 			hardWait(5);
 			click(byAddIcon);
 			click(byClickCatalogTypeTwo);
 			click(bySelectCatalogTypeTwo);			
-			hardWait(5);
+			hardWait(5);*/
 			click(bySytsemConfigurationSoftwareRBP);
 			hardWait(15);
 			click(bySearchButton);
@@ -382,18 +417,22 @@ public class Create_Opportunity_Flow extends Ribbon_Management {
 			/////////////////////////////////////////////////////    SCROLL DOWN TO BOTTOM OF PAGE     //////////////////////////////////////////////////////////
 			((JavascriptExecutor) driver).executeScript("window.scrollTo(0,document.body.scrollHeight)");
 			hardWait(5);
+			/////////////////////////////////////////////////////    SCROLL TO TOP OF PAGE     //////////////////////////////////////////////////////////////////
+			((JavascriptExecutor) driver).executeScript("window.scrollTo(document.body.scrollHeight, 0)");
+            hardWait(5); 
 
             click(byConfigUpdateButton);
             hardWait(15);			
+            click(byAddToQuoteButton);
             
-            try 
+            /*try 
             {
-            	click(byConfigSaveButton);                        
+            	click(byConfigUpdateButton);                        
             }
             catch (Exception e)
             {
             	click(byAddToQuoteButton);            		
-            }          
+            }  */        
             
             hardWait(15);
             click(byQuoteSaveButton);
@@ -464,6 +503,8 @@ public class Create_Opportunity_Flow extends Ribbon_Management {
             hardWait(3);
             enterText(byAddlServicesDiscount,byEnterAddlServicesDiscount);
             hardWait(3);
+            click(byRadioButtonOTDasPercentage);
+            hardWait(3);
             enterText(byOneTimeDiscount,byEnterOneTimeDiscount);
             hardWait(3);
             //click(byQuoteCalculateDiscountButton);
@@ -491,7 +532,22 @@ public class Create_Opportunity_Flow extends Ribbon_Management {
 	            click(byQuoteProposalType);	            
 	            click(bySelectQuoteProposalType);	                
 	            click(byQuoteFileType);	            
-	            click(bySelectPDFFileType);	                
+	            click(bySelectPDFFileType);	
+	            List<WebElement> configTools = driver.findElements(By.xpath("//div[@class='oj-switch-track']"));            
+				if (configTools.size() != 0) {
+					configTools.get(0).findElement(By.xpath("//oj-switch[@aria-labelledby='configurationTotals_t-label']//div[@aria-checked='false']")).click();
+				System.out.println("Switch is OFF and changed to ON");
+				} else {
+				System.out.println("Switch  is already ON");
+				}
+				
+				List<WebElement> otdLineItem = driver.findElements(By.xpath("//div[@class='oj-switch-track']"));            
+				if (otdLineItem.size() != 0) {
+					otdLineItem.get(0).findElement(By.xpath("//oj-switch[@aria-labelledby='oneTimeDiscountLineItem_t-label']//div[@aria-checked='false']")).click();
+				System.out.println("Switch is OFF and changed to ON");
+				} else {
+				System.out.println("Switch  is already ON");
+				}
 	            
 	            String parentHandle=driver.getWindowHandle();
 	            System.out.println("Parent Window - "+parentHandle);
@@ -502,7 +558,7 @@ public class Create_Opportunity_Flow extends Ribbon_Management {
 	            	System.out.println(pdfhandle);
 	            	if(!pdfhandle.equals(parentHandle)) {
 	            		driver.switchTo().window(pdfhandle);	            		
-	            		hardWait(5);
+	            		hardWait(10);
 	            		driver.close();
 	            		hardWait(3);
 	            	}
@@ -530,9 +586,10 @@ public class Create_Opportunity_Flow extends Ribbon_Management {
 	            }
 	            driver.switchTo().window(parentWindow);
 	            hardWait(2);*/
+	            click(byQuoteDetailsButton);
 	            click(byQuoteSaveButton);
 	            hardWait(15);
-				click(byQuoteOpportunityButton);
+				click(byQuoteSFDCQuoteButton);
 				hardWait(15);
 			  }
 			
@@ -551,8 +608,8 @@ public class Create_Opportunity_Flow extends Ribbon_Management {
 		public void testStartandStopSync() throws Exception {
 			try {
 				hardWait(2);
-				click(byClickOracleQuotes);							
-				click(byClickOracleQuoteName);	
+				//click(byClickOracleQuotes);							
+				//click(byClickOracleQuoteName);	
 				highlightWebElement(byClickStartSyncButton);
 				hardWait(3);
 				click(byClickStartSyncButton);

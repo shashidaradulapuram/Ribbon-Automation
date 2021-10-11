@@ -6,14 +6,8 @@
       <class name="com.ribbon.cpq.Create_Opportunity_Flow">
         <methods>
           <include name="testSignout"/>
-          <include name="testAddEdgeMarc"/>
           <include name="testStartandStopSync"/>
-          <include name="testAddFromCatalog"/>
-          <include name="testDiscounting"/>
           <include name="testSignIn"/>
-          <include name="testQuoteDocumentGeneration"/>
-          <include name="testReconfigureModel"/>
-          <include name="testAddGVPP"/>
         </methods>
       </class> <!-- com.ribbon.cpq.Create_Opportunity_Flow -->
     </classes>

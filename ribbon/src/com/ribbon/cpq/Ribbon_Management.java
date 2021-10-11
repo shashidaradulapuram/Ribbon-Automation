@@ -8,7 +8,7 @@ public class Ribbon_Management extends BaseClass{
 	    /////////////////////////////////////    ADD SITE || ADD FROM CATALOG || RECONFIGURE MODEL || DELETE MODEL /////////////////////////////////////////////////////////
 	    public static By byHome                               = By.xpath("//a[text()='Home']");
 		public static By byOpportunity                        = By.xpath("//a[text()='Opportunities']");
-		public static By bySelectOpportunity                  = By.xpath("//a[text()='USD Test']");
+		public static By bySelectOpportunity                  = By.xpath("//a[text()='US TEST Oppty']");
 		public static By byClickOracleQuotes                  = By.xpath("//span[text()='Oracle Quotes']");
 		public static By byClickNewOracleQuote                = By.xpath("(//div[@class='pbHeader'])[2]//td[2]/input[@title='New Oracle Quote']");
 		public static By byClickGoToList                      = By.xpath("(//div[@class='pbBody'])[2]/div[@class='pShowMore']/a[contains(text(),'Go to')]");
@@ -32,12 +32,16 @@ public class Ribbon_Management extends BaseClass{
 		/////////////////////////////////////////////////////////   EDGEMARC RELATED     ////////////////////////////////////////////////////////////////////////////////
 		public static By byClearSiteName                      = By.xpath("//input[@id='siteName|input']");
 		public static By byTopConfigGroup					  = By.xpath("//div[@id='ojChoiceId_topConfigGroup_nonArray']");
-		public static By bySelectEMTopConfigGroup			  = By.xpath("//div[@class='oj-listbox-drop']/ul/li/div[@aria-label='Edge']");
+		public static By bySelectEMTopConfigGroup			  = By.xpath("//div[@id='oj-listbox-drop']/ul/li/div[@aria-label='Edge']");
+		public static By byConfigNameEM   					  = By.xpath("//div[@id='ojChoiceId_configuratorName_nonArray']");
+		public static By bySelectEMConfigName   			  = By.xpath("//div[@id='oj-listbox-drop']/ul/li/div[@aria-label='EdgeMarc Configurator']");
 		public static By byAddConfigurationButton             = By.xpath("//div[@id='addConfiguration']//button[text()='Add Configuration']");
 		public static By byTargetApplication    			  = By.xpath("//div[@id='oj-select-choice-targetApplication']");
-		public static By bySelectTargetApplication 			  = By.xpath("//div[@class='oj-listbox-drop']/ul/li/div[@aria-label='Zoom']");
+		public static By bySelectTargetApplication 			  = By.xpath("//div[@id='oj-listbox-drop']/ul/li/div[@aria-label='Zoom']");
 		public static By bySystemConfiguration                = By.xpath("//div[@id='left-sidebar']//oj-tree-view[@id='system-navigation']/ul/li/ul/li/div/span[2]");		
-		public static By byEdgeMarcCheckbox   				  = By.xpath("//oj-checkboxset[@id='shippingOrderingLimitationsmodellevel']");
+		public static By byEdgeMarcCheckbox   				  = By.xpath("//input[@id='shippingOrderingLimitationsmodelleveltrue|cb']/parent::span");
+		public static By byNewConfig     					  = By.xpath("//div[@id='ojChoiceId_willThisBeForANewOrUpgradeConfiguration']");
+		public static By bySelectNewConfig     				  = By.xpath("//div[@id='oj-listbox-drop']/ul/li/div[@aria-label='New']");
 		public static By byLocationEM     					  = By.xpath("//div[@id='oj-select-choice-location']");
 		public static By bySelectLocationEM               	  = By.xpath("//div[@data-oj-containerid='ojChoiceId_location']/ul/li/div[@aria-label='United States']");
 		public static By byEdgeMarcProductLine				  = By.xpath("//div[@id='oj-select-choice-edgeMarcProdLine']");
@@ -71,8 +75,11 @@ public class Ribbon_Management extends BaseClass{
 		public static By byLevel12Support                     = By.xpath("//div[@id='ojChoiceId_whoProvidesLevel12SupportForThisRibbonProvidesLevel3']");
 		public static By bySelectLevel12Support               = By.xpath("//div[@data-oj-containerid='ojChoiceId_whoProvidesLevel12SupportForThisRibbonProvidesLevel3']/ul/li/div[@aria-label='Ribbon']");
 		////////////////////////////////////////////////////////////////////   GVPP RELATED /////////////////////////////////////////////////////////////////////////////////////
-		public static By bySelectGVPPTopConfigGroup			  = By.xpath("//div[@class='oj-listbox-drop']/ul/li/div[@aria-label='Management']");
-		public static By byLocationGVPP                       = By.xpath("//div[@id='ojChoiceId_location_Lgb']");
+		public static By byGVPPTopConfigGroup                 = By.xpath("//div[@id='ojChoiceId_topConfigGroup_nonArray']");
+		public static By bySelectGVPPTopConfigGroup			  = By.xpath("//div[@id='oj-listbox-drop']/ul/li/div[@aria-label='Management']");
+		public static By byConfigNameGVPP                     = By.xpath("//div[@id='ojChoiceId_configuratorName_nonArray']");		
+		public static By bySelectConfigNameGVPP               = By.xpath("//div[@id='oj-listbox-drop']/ul/li/div[@aria-label='Provisioning and Portals Configurator']");
+		public static By byLocationGVPP                       = By.xpath("//div[@id='ojChoiceId_location_Lgb']");		
 		public static By bySelectLocationGVPP                 = By.xpath("//div[@data-oj-containerid='ojChoiceId_location_Lgb']/ul/li/div[@aria-label='North America or Other ANSI Countries']");
 		public static By byChangeLocationGVPP                 = By.xpath("//div[@data-oj-containerid='ojChoiceId_location_Lgb']/ul/li/div[@aria-label='Swiss']");
 		public static By byPPSWR                              = By.xpath("//div[@id='ojChoiceId_provisionPortalsSWRelease']");
@@ -117,10 +124,19 @@ public class Ribbon_Management extends BaseClass{
 		///////////////////////////////////////////////////////////////////////     ADD FROM CATALOG    /////////////////////////////////////////////////////////////////////////
 		public static By byCatalogName                        = By.xpath("//div[@aria-labelledby='catalogueNameTxt_Bundle-label|label']");
 		public static By bySelectCatalogName                  = By.xpath("//div[@data-oj-containerid='ojChoiceId_catalogueNameTxt_Bundle']/ul/li/div[@aria-label='3rd party Cellusys Catalog']");
+		
+		public static By byCategoryNameCatalog                = By.xpath("//div[@id='ojChoiceId_categoryName_Text']");
+		public static By bySelectCategoryNameCatalogH          = By.xpath("//div[@id='oj-listbox-drop']/ul/li/div[@aria-label='Hardware']");
+		public static By bySelectCategoryNameCatalogS          = By.xpath("//div[@id='oj-listbox-drop']/ul/li/div[@aria-label='Software']");
+		
 		public static By byCCMaintenanceProvider              = By.xpath("//div[@id='ojChoiceId_maintenanceProvider']");
 		public static By bySelectCCMaintenanceProvider        = By.xpath("//div[@data-oj-containerid='ojChoiceId_maintenanceProvider']/ul/li/div[@aria-label='Ribbon']");
+		
+		public static By byAddCatalogButton                   = By.xpath("//div[@id='addCatalog']/button[text()='Add Catalog']");
+		
 		public static By byCatalogType                        = By.xpath("(//div[contains(@class,'col-categoryName_Bundle')])[2]");
 		public static By bySelectCatalogType                  = By.xpath("//div[@data-oj-containerid='ojChoiceId_categoryName_Bundle']/ul/li/div[@aria-label='Hardware']");
+		
 		public static By bySytsemConfigurationRBP             = By.xpath("//div[@id='left-sidebar']//oj-tree-view[@id='system-navigation']//li/div/span[contains(text(),'Ribbon Bundle Product')]");
 		public static By bySytsemConfigurationHardwareRBP     = By.xpath("//div[@id='left-sidebar']//oj-tree-view[@id='system-navigation']//li/div/span[contains(text(),'Hardware_3rd party Cellusys Catalog')]");
 		public static By bySytsemConfigurationSoftwareRBP     = By.xpath("//div[@id='left-sidebar']//oj-tree-view[@id='system-navigation']//li/div/span[contains(text(),'Software_3rd party Cellusys Catalog')]");
@@ -152,7 +168,8 @@ public class Ribbon_Management extends BaseClass{
 		public static By byConfigCancelButton                 = By.xpath("//oj-button[@name='_cancel']/button");
 		
 		////////////////////////////////   SAVE || REPRICE || CALCULATE DISCOUNT || SUBMIT || CREATE NEW VERSION || CLONE || OPPORTUNITY    /////////////////////////////////////
-		public static By byQuoteSaveButton                    = By.xpath("//oj-button[@name='save']/button");
+		public static By byQuoteSaveButton                    = By.xpath("//oj-button[@name='update']/button");
+		public static By byQuoteSFDCQuoteButton               = By.xpath("//oj-button[@name='sfdc_quote']/button");
 		public static By byQuoteRepriceButton                 = By.xpath("//oj-button[@name='reprice']/button");
 		public static By byQuoteCalculateDiscountButton       = By.xpath("//oj-button[@name='calculate_discount']/button");
 		public static By byQuoteOpportunityButton             = By.xpath("//span[text()='Opportunity']");
@@ -178,6 +195,11 @@ public class Ribbon_Management extends BaseClass{
 		public static By byAddlProductDiscount                = By.xpath("//input[@id='additionalProductDiscount_t|input']");
 		public static By byAddlMaintenanceDiscount            = By.xpath("//input[@id='additionalMaintenanceDiscount_t|input']");
 		public static By byAddlServicesDiscount               = By.xpath("//input[@id='additionalServicesDiscount_t|input']");
+		
+		public static By byRadioButtonNOOTD                   = By.xpath("//input[@value='No OTD']/parent::span");
+		public static By byRadioButtonOTDasPercentage         = By.xpath("//input[@value='Apply OTD as Percent']/parent::span");
+		public static By byRadioButtonOTDasCurrency           = By.xpath("//input[@value='Apply OTD as Currency']/parent::span");
+		
 		public static By byOneTimeDiscount                    = By.xpath("//input[@id='oneTimeDiscount_t|input']");
 		public static By byOneTimeDiscountAmount              = By.xpath("//input[@id='oneTimeDiscountAmount_t|input']");
 		
