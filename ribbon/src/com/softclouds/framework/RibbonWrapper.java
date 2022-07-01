@@ -16,46 +16,7 @@ public class RibbonWrapper extends SeleniumWrapper{
 	
    	public static void signIntoRibbon(String baseurl) throws Exception {
 		try {
-				enterURL(baseurl);
-				
-				/*File file =    new File("D:\\macu\\MACU_POC\\resources\\config\\test_execution\\Test.xlsx");
-				FileInputStream f = new FileInputStream(file);
-				XSSFWorkbook rwb=new XSSFWorkbook(f);
-				
-                Sheet sheet=rwb.getSheet("Sheet1");
-                int nor=sheet.getPhysicalNumberOfRows();
-                int noc=sheet.getRow(0).getLastCellNum();
-                System.out.println("value = "+nor);
-                SimpleDateFormat sf=new SimpleDateFormat("dd-MMM-yyyy-hh-mm-ss");
-                Date dt=new Date();
-                String dateandtime=sf.format(dt);
-                Cell rcw=sheet.getRow(0).createCell(3);
-                rcw.setCellValue(dateandtime);
-                int cv=1;
-                for(int r=1;r<nor;r++)
-                {
-                	 DataFormatter df=new DataFormatter();
-                     String username=df.formatCellValue(sheet.getRow(r).getCell(cv));
-                     enterText(byUserIDTextField, username);
-                     cv++;
-     				 String password=df.formatCellValue(sheet.getRow(r).getCell(cv));
-     				 enterText(byPasswordTextField, password);
-     				 //click(bySignInButton);
-     				 cv++;
-     			 	 Cell c=sheet.getRow(r).createCell(cv);
-     				 c.setCellValue("Test Passed"+cv);
-     				 cv--;
-     				 cv--;
-                }
-               
-				//Save and close excel file
-				sheet.autoSizeColumn(nor); //auto fit on column size
-				FileOutputStream fo=new FileOutputStream(file);
-				rwb.write(fo); //save changes
-				rwb.close();
-				fo.close();
-				f.close();*/
-				
+				enterURL(baseurl);				
 				enterText(byUserIDTextFieldID, byusername);
 				enterText(byPasswordTextFieldID, bypassword);
 				click(bySignInButtonID);

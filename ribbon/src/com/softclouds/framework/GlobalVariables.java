@@ -94,6 +94,9 @@ public class GlobalVariables {
 	public static String byEnterPartQtyGTPFWGEO        	= YamlWrapper.getEnterPartQtyGTPFWGEO();
 	public static String byEnterPartQtySFWMULT        	= YamlWrapper.getEnterPartQtySFWMULT();
 	public static String byEnterPartQtySMSANA        	= YamlWrapper.getEnterPartQtySMSANA();
+	public static String byEnterPartQtySFWDIAM        	= YamlWrapper.getEnterPartQtySFWDIAM();
+	public static String byEnterPartQtySFWGEO        	= YamlWrapper.getEnterPartQtySFWGEO();
+	public static String byEnterPartQtySFWRNG        	= YamlWrapper.getEnterPartQtySFWRNG();
 	
 	public static String bysearchusername 				= YamlWrapper.getsearchusername();
 	public static String bygetsearchemailid  			= YamlWrapper.getsearchemailid();

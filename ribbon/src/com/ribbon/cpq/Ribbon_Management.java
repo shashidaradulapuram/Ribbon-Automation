@@ -67,6 +67,7 @@ public class Ribbon_Management extends BaseClass{
 		public static By bySelectAddAdditionalCallCounts      = By.xpath("//div[@data-oj-containerid='ojChoiceId_doYouWantToAddAdditionalCallCounts']/ul/li/div[@aria-label='125']");
 		public static By bySecondPRIPort                      = By.xpath("//div[@id='oj-select-choice-secondPRIPort']");
 		public static By bySelectSecondPRIPort                = By.xpath("//div[@data-oj-containerid='ojChoiceId_secondPRIPort']/ul/li/div[@aria-label='Yes']");
+		
 		public static By byExpandMaintenance                  = By.xpath("//h3[text()='Maintenance']");
 		public static By byMaintenanceProvider                = By.xpath("//div[@id='oj-select-choice-whoProvidesLevel12SupportForThisRibbonProvidesLevel3']");
 		public static By bySelectMaintenanceProvider          = By.xpath("//div[@data-oj-containerid='ojChoiceId_whoProvidesLevel12SupportForThisRibbonProvidesLevel3']/ul/li/div[@aria-label='Ribbon']");
@@ -121,6 +122,7 @@ public class Ribbon_Management extends BaseClass{
 		public static By byClearCustomNEWASCII                = By.xpath("//input[@id='nEWASCIIRequiresTranslationService|input']");
 		public static By byClearCustomNEWDBCS                 = By.xpath("//input[@id='nEWDBCSRequiresTranslationService|input']");
 		
+		public static By byMaintainenceGVPP                   = By.xpath("//a[@title='Maintenance Services, Cables and Misc']");
 		///////////////////////////////////////////////////////////////////////     ADD FROM CATALOG    /////////////////////////////////////////////////////////////////////////
 		public static By byCatalogName                        = By.xpath("//div[@aria-labelledby='catalogueNameTxt_Bundle-label|label']");
 		public static By bySelectCatalogName                  = By.xpath("//div[@data-oj-containerid='ojChoiceId_catalogueNameTxt_Bundle']/ul/li/div[@aria-label='3rd party Cellusys Catalog']");
@@ -153,6 +155,9 @@ public class Ribbon_Management extends BaseClass{
 		
 		public static By byClearPartQtyMULT                   = By.xpath("//div[contains(@class,'cpq-table-body-row')]//span[@title='CELL-SFWMULT']//following::div[2]//input[@id='partQty|input']");
 		public static By byClearPartQtyANA                    = By.xpath("//div[contains(@class,'cpq-table-body-row')]//span[@title='CELL-SMSANA']//following::div[2]//input[@id='partQty|input']");
+		public static By byClearPartQtyDIAM                    = By.xpath("//div[contains(@class,'cpq-table-body-row')]//span[@title='CELL-SFWDIAM']//following::div[2]//input[@id='partQty|input']");
+		public static By byClearPartQtyGEO                    = By.xpath("//div[contains(@class,'cpq-table-body-row')]//span[@title='CELL-SFWGEO']//following::div[2]//input[@id='partQty|input']");
+		public static By byClearPartQtyRNG                    = By.xpath("//div[contains(@class,'cpq-table-body-row')]//span[@title='CELL-SFWRNG']//following::div[2]//input[@id='partQty|input']");
 				
 		public static By byAddPartsButton                     = By.xpath("//button[text()='Add Parts']");
 		public static By byAddIcon      					  = By.xpath("//div[@slot='iconButtons']//button//span[contains(@class,'add-icon')]");

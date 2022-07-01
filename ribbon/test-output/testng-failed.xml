@@ -7,7 +7,11 @@
         <methods>
           <include name="testSignout"/>
           <include name="testStartandStopSync"/>
+          <include name="testAddFromCatalog"/>
+          <include name="testDiscounting"/>
           <include name="testSignIn"/>
+          <include name="testQuoteDocumentGeneration"/>
+          <include name="testReconfigureModel"/>
         </methods>
       </class> <!-- com.ribbon.cpq.Create_Opportunity_Flow -->
     </classes>

@@ -3,7 +3,7 @@
 <suite name="Suite">
   <test thread-count="5" name="Test">
     <classes>
-       <class name="com.ribbom.cpq.Create_Opportunity_Flow">
+       <class name="com.bigbasket.app.AddProductsToCart_Flow">
        <methods>
           <include name="testSignIn" />          
           <exclude name="testSignout" />

@@ -2,48 +2,48 @@
 <testng-results ignored="0" total="8" passed="8" failed="0" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2021-10-11T11:42:45 IST" name="Default suite" finished-at="2021-10-11T12:16:38 IST" duration-ms="2032770">
+  <suite started-at="2021-12-20T11:12:33 IST" name="Default suite" finished-at="2021-12-20T11:45:28 IST" duration-ms="1974966">
     <groups>
     </groups>
-    <test started-at="2021-10-11T11:42:45 IST" name="Default test" finished-at="2021-10-11T12:16:38 IST" duration-ms="2032770">
+    <test started-at="2021-12-20T11:12:33 IST" name="Default test" finished-at="2021-12-20T11:45:28 IST" duration-ms="1974966">
       <class name="com.ribbon.cpq.Create_Opportunity_Flow">
-        <test-method is-config="true" signature="testSignIn()[pri:0, instance:com.ribbon.cpq.Create_Opportunity_Flow@6839203b]" started-at="2021-10-11T11:42:45 IST" name="testSignIn" finished-at="2021-10-11T11:43:34 IST" duration-ms="48798" status="PASS">
+        <test-method is-config="true" signature="testSignIn()[pri:0, instance:com.ribbon.cpq.Create_Opportunity_Flow@47fcefb3]" started-at="2021-12-20T11:12:33 IST" name="testSignIn" finished-at="2021-12-20T11:13:04 IST" duration-ms="30956" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- testSignIn -->
-        <test-method signature="testAddSite()[pri:1, instance:com.ribbon.cpq.Create_Opportunity_Flow@6839203b]" started-at="2021-10-11T11:43:34 IST" name="testAddSite" description="Navigate from Salesforce to CPQ" finished-at="2021-10-11T11:46:39 IST" duration-ms="185542" status="PASS">
+        <test-method signature="testAddSite()[pri:1, instance:com.ribbon.cpq.Create_Opportunity_Flow@47fcefb3]" started-at="2021-12-20T11:13:04 IST" name="testAddSite" description="Navigate from Salesforce to CPQ" finished-at="2021-12-20T11:15:49 IST" duration-ms="165031" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- testAddSite -->
-        <test-method signature="testAddEdgeMarc()[pri:2, instance:com.ribbon.cpq.Create_Opportunity_Flow@6839203b]" started-at="2021-10-11T11:46:40 IST" name="testAddEdgeMarc" description="Add EdgeMarc Model" finished-at="2021-10-11T11:53:42 IST" duration-ms="421898" status="PASS">
+        <test-method signature="testAddEdgeMarc()[pri:2, instance:com.ribbon.cpq.Create_Opportunity_Flow@47fcefb3]" started-at="2021-12-20T11:15:49 IST" name="testAddEdgeMarc" description="Add EdgeMarc Model" finished-at="2021-12-20T11:21:23 IST" duration-ms="334347" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- testAddEdgeMarc -->
-        <test-method signature="testAddGVPP()[pri:3, instance:com.ribbon.cpq.Create_Opportunity_Flow@6839203b]" started-at="2021-10-11T11:53:42 IST" name="testAddGVPP" description="Add GVPP Model" finished-at="2021-10-11T12:02:17 IST" duration-ms="515853" status="PASS">
+        <test-method signature="testAddGVPP()[pri:3, instance:com.ribbon.cpq.Create_Opportunity_Flow@47fcefb3]" started-at="2021-12-20T11:21:23 IST" name="testAddGVPP" description="Add GVPP Model" finished-at="2021-12-20T11:30:27 IST" duration-ms="543393" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- testAddGVPP -->
-        <test-method signature="testAddFromCatalog()[pri:4, instance:com.ribbon.cpq.Create_Opportunity_Flow@6839203b]" started-at="2021-10-11T12:02:18 IST" name="testAddFromCatalog" description="Add From Catalog" finished-at="2021-10-11T12:09:48 IST" duration-ms="450732" status="PASS">
+        <test-method signature="testAddFromCatalog()[pri:4, instance:com.ribbon.cpq.Create_Opportunity_Flow@47fcefb3]" started-at="2021-12-20T11:30:27 IST" name="testAddFromCatalog" description="Add From Catalog" finished-at="2021-12-20T11:38:42 IST" duration-ms="495335" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- testAddFromCatalog -->
-        <test-method signature="testReconfigureModel()[pri:5, instance:com.ribbon.cpq.Create_Opportunity_Flow@6839203b]" started-at="2021-10-11T12:09:48 IST" name="testReconfigureModel" description="Reconfigure Model" finished-at="2021-10-11T12:12:06 IST" duration-ms="137252" status="PASS">
+        <test-method signature="testReconfigureModel()[pri:5, instance:com.ribbon.cpq.Create_Opportunity_Flow@47fcefb3]" started-at="2021-12-20T11:38:42 IST" name="testReconfigureModel" description="Reconfigure Model" finished-at="2021-12-20T11:40:59 IST" duration-ms="137137" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- testReconfigureModel -->
-        <test-method signature="testDiscounting()[pri:6, instance:com.ribbon.cpq.Create_Opportunity_Flow@6839203b]" started-at="2021-10-11T12:12:06 IST" name="testDiscounting" description="Discounting" finished-at="2021-10-11T12:13:26 IST" duration-ms="80207" status="PASS">
+        <test-method signature="testDiscounting()[pri:6, instance:com.ribbon.cpq.Create_Opportunity_Flow@47fcefb3]" started-at="2021-12-20T11:40:59 IST" name="testDiscounting" description="Discounting" finished-at="2021-12-20T11:42:19 IST" duration-ms="79553" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- testDiscounting -->
-        <test-method signature="testQuoteDocumentGeneration()[pri:7, instance:com.ribbon.cpq.Create_Opportunity_Flow@6839203b]" started-at="2021-10-11T12:13:26 IST" name="testQuoteDocumentGeneration" description="Generate Quote Documents" finished-at="2021-10-11T12:15:10 IST" duration-ms="104400" status="PASS">
+        <test-method signature="testQuoteDocumentGeneration()[pri:7, instance:com.ribbon.cpq.Create_Opportunity_Flow@47fcefb3]" started-at="2021-12-20T11:42:19 IST" name="testQuoteDocumentGeneration" description="Generate Quote Documents" finished-at="2021-12-20T11:44:03 IST" duration-ms="104477" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- testQuoteDocumentGeneration -->
-        <test-method signature="testStartandStopSync()[pri:8, instance:com.ribbon.cpq.Create_Opportunity_Flow@6839203b]" started-at="2021-10-11T12:15:10 IST" name="testStartandStopSync" description="Start Sync &amp; Stop Sync in SFDC" finished-at="2021-10-11T12:16:18 IST" duration-ms="67977" status="PASS">
+        <test-method signature="testStartandStopSync()[pri:8, instance:com.ribbon.cpq.Create_Opportunity_Flow@47fcefb3]" started-at="2021-12-20T11:44:03 IST" name="testStartandStopSync" description="Start Sync &amp; Stop Sync in SFDC" finished-at="2021-12-20T11:45:08 IST" duration-ms="64906" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- testStartandStopSync -->
-        <test-method is-config="true" signature="testSignout()[pri:0, instance:com.ribbon.cpq.Create_Opportunity_Flow@6839203b]" started-at="2021-10-11T12:16:18 IST" name="testSignout" finished-at="2021-10-11T12:16:38 IST" duration-ms="19626" status="PASS">
+        <test-method is-config="true" signature="testSignout()[pri:0, instance:com.ribbon.cpq.Create_Opportunity_Flow@47fcefb3]" started-at="2021-12-20T11:45:08 IST" name="testSignout" finished-at="2021-12-20T11:45:28 IST" duration-ms="19384" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- testSignout -->

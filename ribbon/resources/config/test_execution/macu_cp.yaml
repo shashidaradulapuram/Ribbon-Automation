@@ -21,8 +21,8 @@ webdriverWaitTime: 100
 #username: shashidara.sales@softclouds.com.test 
 #password: Softclouds@123
 
-username: rashmip@softclouds.com.test 
-password: August@123456789
+username: rashmiprabhakar@softclouds.com.test
+password: Softclouds@12345
 
 #Enter Quote Name
 enterquotename: RIBBON AUTOMATION DEMO
@@ -37,13 +37,13 @@ entersystemsrequire: '3'
 
 enteredpnodes: '2'
 enterbasiclines: '201'
-entersiplines: '201'
-entersipedpdevices: '201'
-entereuplogins: '201'
+entersiplines: '102'
+entersipedpdevices: '301'
+entereuplogins: '101'
 
-enternewbasiclines: '201'
-enternewsiplines: '201'
-enternewsipedpdevices: '201'
+enternewbasiclines: '202'
+enternewsiplines: '99'
+enternewsipedpdevices: '101'
 enterneweuplogins: '201'
 
 entercimvoicemail: '201'
@@ -57,6 +57,9 @@ enterpartqtylab: '3'
 enterpartqtygtpfwgeo: '2'
 enterpartqtysfwmult: '1'
 enterpartqtysmsana: '1'
+enterpartqtysfwdiam: '1'
+enterpartqtysfwgeo: '1'
+enterpartqtysfwrng: '1'
 
 enteraddlproductdiscount: '1.20'
 enteraddlmaintenancediscount: '1.25'

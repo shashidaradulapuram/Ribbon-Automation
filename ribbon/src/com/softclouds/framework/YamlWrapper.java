@@ -116,6 +116,15 @@ public class YamlWrapper {
 	public static String getEnterPartQtySMSANA() {
 		return (String) yamlMaps.get("enterpartqtysmsana");
 	}	
+	public static String getEnterPartQtySFWDIAM() {
+		return (String) yamlMaps.get("enterpartqtysfwdiam");
+	}
+	public static String getEnterPartQtySFWGEO() {
+		return (String) yamlMaps.get("enterpartqtysfwgeo");
+	}
+	public static String getEnterPartQtySFWRNG() {
+		return (String) yamlMaps.get("enterpartqtysfwrng");
+	}
 	
 	
 	public static String getsearchusername() {

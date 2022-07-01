@@ -16,8 +16,10 @@ import org.testng.Assert;
 import org.testng.Reporter;
 import org.testng.annotations.AfterClass;
 import org.testng.annotations.BeforeClass;
+import org.testng.annotations.Listeners;
 import org.testng.annotations.Test;
 
+@Listeners(com.ribbon.cpq.TestListener.class)
 public class Create_Opportunity_Flow extends Ribbon_Management {
 	@BeforeClass
 	public void testSignIn() throws Exception 
@@ -25,7 +27,7 @@ public class Create_Opportunity_Flow extends Ribbon_Management {
 		try {
 			    openBrowser();
 		    	signIntoRibbon();		    	
-		    } catch (Exception e) 
+		    } catch (Exception e) 		
 		    {
 			log.error("Login/SignIn un-successful");
 			e.printStackTrace();
@@ -36,7 +38,7 @@ public class Create_Opportunity_Flow extends Ribbon_Management {
 	public void testAddSite() throws Exception {
 		try {
 			try {
-					hardWait(20);
+					hardWait(15);
 					click(bylightningprofile);					
 					hardWait(5);
 					click(bySwitchtoclassic);
@@ -53,8 +55,17 @@ public class Create_Opportunity_Flow extends Ribbon_Management {
 					hardWait(5);
 					click(byClickOracleQuotes);			
 					//click(byClickNewOracleQuote);
-					click(byClickGoToList);
-					click(byClickOracleQuoteName);			
+					
+					try {					
+						click(byClickOracleQuoteName);						
+					}
+					catch(Exception e) 
+				     {
+						click(byClickGoToList);
+						click(byClickOracleQuoteName);
+						e.printStackTrace();
+				     }				       
+								
 					click(byClickEditButton);
 					hardWait(10);
 					String current = System.getProperty("user.dir");
@@ -66,9 +77,9 @@ public class Create_Opportunity_Flow extends Ribbon_Management {
 		            driver.navigate().refresh();
 		            hardWait(25);            
 		            enterText(byClearQuoteName,byEnterQuoteName); 
-		            hardWait(2);
+		            hardWait(5);
 		            click(byQuoteSaveButton);
-		            hardWait(2);
+		            hardWait(5);
 			     
 			     
 	    	} catch (Exception e) {
@@ -86,10 +97,12 @@ public class Create_Opportunity_Flow extends Ribbon_Management {
 	@Test (priority = 2, description = "Add EdgeMarc Model")
 	public void testAddEdgeMarc() throws Exception {
 		try { 
+			highlightWebElement(byAddSiteButton);
+            hardWait(3);
 			click(byAddSiteButton);
-            hardWait(15);
+            hardWait(20);
             enterText(byClearSiteName,byEnterSiteNameEM);
-            hardWait(5);
+            hardWait(6);
             click(byTopConfigGroup);            
             click(bySelectEMTopConfigGroup);
             click(byConfigNameEM);            
@@ -123,7 +136,7 @@ public class Create_Opportunity_Flow extends Ribbon_Management {
             click(bySelectEdgeMarcConfigSupport);            
             click(bySDWANPerpetualLicense);           
             click(bySelectSDWANPerpetualLicense);            
-            click(byYearsOfSupport);            
+            click(byYearsOfSupport);              
             click(bySelectYearsOfSupport);           
             click(byImplementationServices);           
             click(bySelectImplementationServices);            
@@ -143,13 +156,13 @@ public class Create_Opportunity_Flow extends Ribbon_Management {
             click(byMaintenanceProvider);            
             click(bySelectMaintenanceProvider);  
 			/////////////////////////////////////////////////////    OEM L1/2 Support Approved    /////////////////////////////////////////////////////////////////
-			List<WebElement> oemSupport = driver.findElements(By.xpath("//div[@class='oj-switch-track']"));            
+			/*List<WebElement> oemSupport = driver.findElements(By.xpath("//div[@class='oj-switch-track']"));            
 			if (oemSupport.size() != 0) {
 				oemSupport.get(0).findElement(By.xpath("//oj-switch[@id='oEML12SupportApproved']//div[@aria-checked='false']")).click();
 			System.out.println("Switch is OFF and changed to ON");
 			} else {
 			System.out.println("Switch is already ON");
-			}
+			}*/
 			click(byLevelOfSupportRequired);            
             click(bySelectLevelOfSupportRequired); 
             click(byConfigUpdateButton);
@@ -179,6 +192,8 @@ public class Create_Opportunity_Flow extends Ribbon_Management {
 	@Test (priority = 3, description = "Add GVPP Model")
 	public void testAddGVPP() throws Exception {
 		try {
+			highlightWebElement(byAddSiteButton);
+            hardWait(3);
 			click(byAddSiteButton);
             hardWait(15);
             enterText(byClearSiteName,byEnterSiteNameGVPP);
@@ -267,12 +282,13 @@ public class Create_Opportunity_Flow extends Ribbon_Management {
             click(byNewSPResellerPortalLogins);
             click(bySelectNewSPResellerPortalLogins);
             
-            enterText(byClearCIMVoiceMail,byEnterCIMVoiceMail);
-            hardWait(3);
-            
             WebElement portalLanguages = driver.findElement(By.xpath("//label[@id='sMBPortalLogins_existingPortal-label|label']"));
             ((JavascriptExecutor) driver).executeScript("arguments[0].scrollIntoView(true);", portalLanguages);
             hardWait(6);
+            
+            //enterText(byClearCIMVoiceMail,byEnterCIMVoiceMail);
+            //hardWait(3);        
+           
             
             click(byPortalLanguagescheckkbox);
             enterText(byClearCustomNEWASCII,byEnterCustomNewASCII);
@@ -286,8 +302,15 @@ public class Create_Opportunity_Flow extends Ribbon_Management {
 			hardWait(5);
 			/////////////////////////////////////////////////////    SCROLL TO TOP OF PAGE     //////////////////////////////////////////////////////////////////
 			((JavascriptExecutor) driver).executeScript("window.scrollTo(document.body.scrollHeight, 0)");
-			hardWait(5);			
-            
+			hardWait(5);	
+			
+			click(byMaintainenceGVPP);
+			click(byLevel12Support);
+			click(bySelectLevel12Support);
+			click(byLevelOfSupportRequired);
+			click(bySelectLevelOfSupportRequired);
+			click(byConfigUpdateButton);
+			
             try 
             {
             	hardWait(5);
@@ -332,10 +355,12 @@ public class Create_Opportunity_Flow extends Ribbon_Management {
              System.out.println("Already Target Application visible and is read only");
             }
             
-            click(byExpandMaintenance);
+            //click(byExpandMaintenance);
             click(byMaintenanceProvider);
             click(bySelectMaintenanceProvider);
-            
+            click(byLevelOfSupportRequired);
+			click(bySelectLevelOfSupportRequired);
+			
             click(byAddCatalogButton);
             hardWait(5);
             click(byCategoryNameCatalog);
@@ -344,7 +369,7 @@ public class Create_Opportunity_Flow extends Ribbon_Management {
             hardWait(5);            
             
             click(bySytsemConfigurationHardwareRBP);
-            hardWait(3);
+            hardWait(5);
             click(bySearchButton);
             hardWait(6);
             
@@ -405,7 +430,28 @@ public class Create_Opportunity_Flow extends Ribbon_Management {
             WebElement ana= driver.findElement(By.xpath("//div[contains(@class,'cpq-table-body-row')]//span[@title='CELL-SMSANA']//following::div[2]/span")); 
             actfive.doubleClick(ana).perform();            
             enterText(byClearPartQtyANA,byEnterPartQtySMSANA);
-            hardWait(6);	
+            hardWait(6);
+            
+            Actions actsix = new Actions(driver);
+            //Double click on element
+            WebElement diam= driver.findElement(By.xpath("//div[contains(@class,'cpq-table-body-row')]//span[@title='CELL-SFWDIAM']//following::div[2]/span")); 
+            actsix.doubleClick(diam).perform();            
+            enterText(byClearPartQtyDIAM,byEnterPartQtySMSANA);
+            hardWait(6);
+            
+            Actions actseven = new Actions(driver);
+            //Double click on element
+            WebElement geo= driver.findElement(By.xpath("//div[contains(@class,'cpq-table-body-row')]//span[@title='CELL-SFWGEO']//following::div[2]/span")); 
+            actseven.doubleClick(geo).perform();            
+            enterText(byClearPartQtyGEO,byEnterPartQtySMSANA);
+            hardWait(6);
+            
+            Actions acteight = new Actions(driver);
+            //Double click on element
+            WebElement rng= driver.findElement(By.xpath("//div[contains(@class,'cpq-table-body-row')]//span[@title='CELL-SFWRNG']//following::div[2]/span")); 
+            acteight.doubleClick(rng).perform();            
+            enterText(byClearPartQtyRNG,byEnterPartQtySMSANA);
+            hardWait(6);
             
 			/////////////////////////////////////////////////////    SCROLL DOWN TO BOTTOM OF PAGE     //////////////////////////////////////////////////////////
 			((JavascriptExecutor) driver).executeScript("window.scrollTo(0,document.body.scrollHeight)");
@@ -607,9 +653,7 @@ public class Create_Opportunity_Flow extends Ribbon_Management {
 		@Test (priority = 8, description = "Start Sync & Stop Sync in SFDC")
 		public void testStartandStopSync() throws Exception {
 			try {
-				hardWait(2);
-				//click(byClickOracleQuotes);							
-				//click(byClickOracleQuoteName);	
+				hardWait(2);					
 				highlightWebElement(byClickStartSyncButton);
 				hardWait(3);
 				click(byClickStartSyncButton);
@@ -635,9 +679,9 @@ public class Create_Opportunity_Flow extends Ribbon_Management {
 		        Alert syncCompleted = driver.switchTo().alert();
 		        String syncStatus= driver.switchTo().alert().getText();	
 		        System.out.println("Start Sync Status: "+syncStatus);
-		        hardWait(4);
+		        hardWait(5);
 		        syncCompleted.accept();
-		        
+		        hardWait(5);
 			  }
 			
 			catch(Exception e) {
